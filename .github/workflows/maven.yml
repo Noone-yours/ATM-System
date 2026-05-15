@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     services:
@@ -43,10 +42,11 @@ jobs:
         DB_NAME: atm_db
         DB_USER: postgres
         DB_PASS: password
-      run: mvn -B package --file pom.xml
+      working-directory: atm-system
+      run: mvn -B package
 
     - name: Upload Build Artifact
       uses: actions/upload-artifact@v4
       with:
         name: atm-system-jar
-        path: target/*.jar
+        path: atm-system/target/*.jar
