@@ -1,6 +1,8 @@
 package com.atm.core.repository;
 
-import com.atm.core.entity.AccountEntity;
+// Piliin mo lang ang ISA dito depende kung nasaan talaga yung AccountEntity file mo:
+import com.atm.core.entity.AccountEntity; 
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import java.util.Optional;
